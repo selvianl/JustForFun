@@ -18,20 +18,17 @@ class Ders():
         print(self.name , "Dogru : ", self.dogru)
         print(self.name , "Yanlis : ", self.yanlis)
 
-        if (self.dogru+ self.yanlis > 40):
-            print ("Cok soru girildi")
+        
+        self.bos=(40 - (self.dogru + self.yanlis))
+        print(self.name , "Bos : ", self.bos)
 
-        else:
-            self.bos=(40 - (self.dogru + self.yanlis))
-            print(self.name , "Bos : ", self.bos)
+        self.net= (self.dogru - (self.yanlis+(self.yanlis/4)))
+        print(self.name , "Net :" ,self.net)
 
-            self.net= (self.dogru - (self.yanlis+(self.yanlis/4)))
-            print(self.name , "Net :" ,self.net)
+        self.netPuan=( self.net*self.katsayi )
+        print(self.name , "Puan : ", self.netPuan)
 
-            self.netPuan=( self.net*self.katsayi )
-            print(self.name , "Puan : ", self.netPuan)
-
-            return self.netPuan
+        return self.netPuan
 
 fen=Ders(name="Fen", katsayi=3,)
 fen.netHesapla()
