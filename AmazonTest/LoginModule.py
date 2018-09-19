@@ -13,11 +13,11 @@ class Login(unittest.TestCase):
         elem = driver.find_element_by_id('nav-link-accountList').click()
         username = driver.find_element_by_id("ap_email")
 
-        username.send_keys("pierogist@yandex.com")
+        username.send_keys("mail_here")
         elem = driver.find_element_by_id("continue").click()
 
         password = driver.find_element_by_id("ap_password")
-        password.send_keys("Ilikepierogi")
+        password.send_keys("password_here")
 
         elem = driver.find_element_by_id("signInSubmit").click()
 
